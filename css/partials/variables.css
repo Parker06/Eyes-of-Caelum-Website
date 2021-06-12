@@ -1,0 +1,20 @@
+/*import fonts from google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=RocknRoll+One&family=Varela+Round&family=Zen+Dots&display=swap');
+
+
+:root{
+    --light-gray: #5e5e5ea1;
+    --primary-color: #252525;
+    --border: #2b303218;
+    --text-color: #a02028;
+    --lobster: "Lobster", sans-serif;
+    --Zen-Dots: "Zen Dots", cursive;
+    --RocknRoll: "RocknRoll One", cursive;
+    --Varela-Round: "Varela Round":, sans-serif;
+    --text-color: #777777;
+    --border-color: #acacac17;
+    --gradient-color: linear-gradient(90deg, #a02028 0%, #ffffff 100%);
+    --black-gradient: linear-gradient(135deg, #333 0%, white 100%)
+    --shadow-color: 0px 10px 30px rgba(128, 128, 128, 0.3);
+    --box-shadow: 0 10px 30px rgba(163, 163, 163, 0.205);
+}
