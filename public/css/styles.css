@@ -149,7 +149,7 @@ body{
     right: 0;
 }
 
-/*Slider Dots*/
+/*Slider Dots
 .slick-dots{
     display: flex;
     justify-content: center;
@@ -180,7 +180,7 @@ body{
     transform: scale(2.5);
     box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.205);
 }
-
+*/
 /*Footer*/
 
 h2,h3{
