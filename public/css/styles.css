@@ -453,6 +453,9 @@ h2,h3{
 
   /*Music Video*/
 
+.music-video{
+  margin: 0 auto; /* make em equal */
+}
 
 .titles {
   font-family: var(--RocknRoll);
