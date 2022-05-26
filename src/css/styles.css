@@ -40,7 +40,6 @@ font-family: var(--RocknRoll);
 }
 
 .navbar{
-display: flex;
 justify-content: space-between;
 align-items: center;
 background-color: black;
