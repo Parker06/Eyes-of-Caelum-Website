@@ -1,5 +1,207 @@
 @import url(./partials/variables.css);
 
+
+.flip-card{
+  width:500px;
+  height:500px;
+  background:transparent;
+  perspective:1000px;
+  }
+
+  .flip-card-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.9s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+
+  .flip-card:hover .flip-card-inner{
+  transform:rotateY(180deg);
+  }
+
+  .flip-card-back , .flip-card-front{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  }
+  .flip-card-front{
+  color: rgb(255, 255, 255);
+  background: url('./assets/gallery/cd\ front.jpg') no-repeat center center;
+  background-size: cover;
+  margin: 0 auto;
+  }
+
+  .flip-card-back{
+  background-color: #2980b9;
+  color: white;
+  transform:rotateY(180deg);
+  background: url('./assets/gallery/cd\ back.jpg') no-repeat center center;
+  background-size: cover;
+  margin: 0 auto;
+  }
+
+
+  .dark {
+      background: #000;
+      justify-content: center;
+      text-align: center; margin: 3rem auto;
+  }
+
+
+  .btn-big {
+      border-radius: 0px;
+      text-decoration: none;
+      padding: 18px 24px;
+      font-size: 14px;
+      line-height: 40px;
+      text-transform: uppercase;
+      font-family: 'RocknRoll', sans-serif; font-weight:400;
+      letter-spacing: 3px;
+      -webkit-transition: all .4s ease-in-out;
+      -moz-transition: all .4s ease-in-out;
+          -ms-transition: all .4s ease-in-out;
+          -o-transition: all .4s ease-in-out;
+              transition: all .4s ease-in-out;
+  }
+
+  .btn-white{
+      border:solid 2px #fff;
+      background: transparent;
+      color: #fff !important;
+  }
+  .btn-white:hover{
+      border:solid 2px #fff;
+      background: #fff;
+      color: #1f1f1f !important;
+  }
+  
+  /*FOOTER*/
+
+/* FOOTER */
+.footer {
+width: 100%;
+background: #000000;
+display: block;
+}
+
+.inner-footer {
+width: 95%;
+margin: auto;
+padding: 30px 10px;
+display: flex;
+flex-wrap: wrap;
+box-sizing: border-box;
+justify-content: center;
+}
+
+.footer-items {
+width: 25%;
+padding: 10px 20px;
+box-sizing: border-box;
+color: #fff;
+}
+
+.footer-items p {
+font-size: 16px;
+text-align: justify;
+line-height: 25px;
+color: #fff;
+}
+
+.footer-items h1 {
+color: #fff;
+}
+
+.border1 {
+height: 3px;
+width: 40px;
+background: #a02028;
+color: #a02028;
+background-color: #a02028;
+border: 0px;
+}
+
+ul {
+list-style: none;
+color: #fff;
+font-size: 15px;
+letter-spacing: 0.5px;	
+}
+
+ul a {
+text-decoration: none;
+outline: none;
+color: #fff;
+transition: 0.3s;
+}
+
+ul a:hover {
+color: #a02028;
+}
+
+footer-items ul li {
+margin: 10px 0;
+height: 25px;
+}
+
+footer-items li i {
+margin-right: 20px;
+}
+
+.social-media {
+width: 100%;
+color: #a02028;
+text-align: center;
+font-size: 20px;
+}
+
+.social-media a {
+text-decoration: none;
+}
+
+.social-media i {
+height: 25px;
+width: 25px;
+margin: 20px 10px;
+padding: 4px;
+color: #fff;
+transition: 0.5s;
+}
+
+.social-media i:hover {
+transform: scale(1.5);
+}
+
+.footer-bottom {
+padding: 10px;
+background: #000000;
+color: #fff;
+font-size: 16px;
+text-align: center;
+}
+
+/* for tablet mode view */
+
+@media screen and (max-width: 1275px) {
+.footer-items {
+width: 50%;
+}
+}
+
+/* for mobile screen view */
+
+@media screen and (max-width: 660px) {
+.footer-items {
+width: 100%;
+}
+}
+
 /*navbar*/
 
   .header_area .main-menu .nav-item .nav-link{
@@ -36,6 +238,9 @@ body{
   background-color: black;
   color: white;
   font-family: var(--RocknRoll);
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 .navbar{
@@ -120,52 +325,40 @@ body{
 
 /*Home Page cards*/
 
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+.dark {
+	background: #000;
+    justify-content: center;
+    text-align: center; margin: 3rem auto;
 }
 
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+
+.btn-big {
+    border-radius: 0px;
+    text-decoration: none;
+    padding: 18px 24px;
+    font-size: 14px;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-family: 'RocknRoll', sans-serif; font-weight:400;
+    letter-spacing: 3px;
+    -webkit-transition: all .4s ease-in-out;
+       -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+         -o-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+.btn-white{
+    border:solid 2px #fff;
+    background: transparent;
+    color: #fff !important;
+}
+.btn-white:hover{
+    border:solid 2px #fff;
+    background: #fff;
+    color: #1f1f1f !important;
 }
 
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-/* Style the back side */
-.flip-card-back {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
-}
 
   /*Music Video*/
 
@@ -254,41 +447,10 @@ body{
   }
 
 
-/*Contacts*/
-
-.contacts-area li{
-  margin: 10px 10px;
-}
-
-.contacts-area a i{
-  background: #494848;
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  border-radius: 50%;
-  font-size: 20px;
-  color: white;
-  padding: 10px 11px;
-}
-
-
-.contacts-area #email:hover{
-  background: var(--gradient-color);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-decoration: underline;
-}
-
-.contacts-area a:hover{
-  background: var(--gradient-color);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: #d85760;
-  background-clip: text;
-}
 
 .gallery_row{
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
 }
+
