@@ -238,7 +238,6 @@ body{
   background-color: black;
   color: white;
   font-family: var(--RocknRoll);
-  display:flex;
   justify-content:center;
   align-items:center;
 }
